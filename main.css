@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+
+* {
+  font-family: "Noto Sans KR", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  background-image: url("https://img.freepik.com/premium-vector/graph-paper-texture-blank-note-paper_391639-2862.jpg");
+  display: flex;
+  justify-content: center;
+  /* 부모요소의 주 축(가로축)에서 자식 요소들을 가운데로 정렬 */
+  align-items: center;
+  /* 교차 축에서의 정렬(세로축 정렬) */
+  flex-direction: column;
+  padding: 50px 0;
+  margin: 0 40px;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 80px;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0;
+  flex-direction: column;
+}
+.button_area {
+  display: flex;
+  width: 100%;
+  padding-bottom: 40px;
+  /* background-color: #f8f2df; */
+  justify-content: center;
+}
+
+#text-list {
+  border-radius: 5px;
+  border: solid 1px lightslategray;
+  margin-right: 5px;
+  padding-left: 10px;
+  width: 60vb;
+  height: 100%;
+  font-size: 30px;
+  background-color: rgb(248, 248, 234);
+}
+
+.add-btn {
+  height: 100%;
+  font-size: 30px;
+  background-color: rgb(252, 239, 196);
+  margin-top: -16px;
+}
+
+.listed-item {
+  background-color: rgb(252, 245, 210);
+  border-radius: 10px;
+  padding: 10px 10px;
+  width: fit-content;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+input[type="checkbox"] + label {
+  display: inline-block;
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+}
+input[type="checkbox"] + label::before {
+  display: block;
+  content: "";
+  font-size: 20px;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  position: absolute;
+  left: 0;
+  top: 6px;
+  border: 1px solid #ddd;
+  color: lightcoral;
+}
+
+input[type="checkbox"]:checked + label::before {
+  content: "✔";
+}
+input[type="checkbox"]:checked + label {
+  text-decoration: line-through;
+  /* 글 중앙에 선 긋는 효과 넣어서 task 완료 표시해주기 */
+}
+
+.delete-btn {
+  padding: 5px;
+  margin-left: 15px;
+}
